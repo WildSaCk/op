@@ -45,3 +45,7 @@ rm -rf package/test
 
 #filetransfer
 git clone --depth 1 https://github.com/Porcat/luci-app-filetransfer.git package/luci-app-filetransfer
+cd
+git clone --depth 1 https://github.com/caonimagfw/openwrt-packages.git 
+mv openwrt-packages/luci-lib-fs /workdir/openwrt/package/
+cd /workdir/openwrt
