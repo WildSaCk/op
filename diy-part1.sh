@@ -25,7 +25,10 @@ rm -rf package/test
 git clone --depth 1 https://github.com/tty228/luci-app-serverchan.git package/luci-app-serverchan
 
 #fullcone
-git clone --depth 1 -b master --single-branch https://github.com/LGA1150/openwrt-fullconenat package/fullconenat
+cd
+git clone --depth 1 -b master --single-branch https://github.com/coolsnowwolf/lede.git
+mv lede/package/lean/openwrt-fullconenat /workdir/openwrt/package/openwrt-fullconenat
+cd /workdir/openwrt
 
 #argon
 git clone --depth 1 https://github.com/jerrykuku/luci-theme-argon.git package/luci-theme-argon
