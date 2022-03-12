@@ -16,6 +16,29 @@
 # Add a feed source
 #echo 'src-git helloworld https://github.com/fw876/helloworld' >>feeds.conf.default
 #echo 'src-git passwall https://github.com/xiaorouji/openwrt-passwall' >>feeds.conf.default
+#openclash，在menuconfig的时候选上luci-compat
 git clone https://github.com/vernesong/OpenClash.git package/test --depth 1
 mv package/test/luci-app-openclash package/luci-app-openclash
 rm -rf package/test
+
+#serverchan
+git clone --depth 1 https://github.com/tty228/luci-app-serverchan.git package/luci-app-serverchan
+
+#fullcone
+git clone --depth 1 -b master --single-branch https://github.com/LGA1150/openwrt-fullconenat package/fullconenat
+
+#argon
+git clone --depth 1 https://github.com/jerrykuku/luci-theme-argon.git package/luci-theme-argon
+
+#adguard
+git clone --depth 1 https://github.com/rufengsuixing/luci-app-adguardhome.git package/luci-app-adguardhome
+
+#diskman
+git clone --depth 1 https://github.com/lisaac/luci-app-diskman.git package/test
+mv package/test/applications/luci-app-diskman package/luci-app-diskman
+mkdir -p package/parted
+mv package/test/Parted.Makefile package/parted/Makefile
+rm -rf package/test
+
+#filetransfer
+git clone --depth 1 https://github.com/Porcat/luci-app-filetransfer.git package/luci-app-filetransfer
