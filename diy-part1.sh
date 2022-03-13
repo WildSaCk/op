@@ -26,9 +26,11 @@ git clone --depth 1 https://github.com/tty228/luci-app-serverchan.git package/lu
 
 #fullcone
 cd
-git clone --depth 1 -b master --single-branch https://github.com/coolsnowwolf/lede.git
-mv lede/package/lean/openwrt-fullconenat /workdir/openwrt/package/openwrt-fullconenat
+git clone --depth 1 -b 21.02 --single-branch https://github.com/Lienol/openwrt.git
+mv openwrt/network/fullconenat /workdir/openwrt/package/fullconenat
+mv openwrt/package/network/config/firewall/patches /workdir/openwrt/package/network/config/firewall
 cd /workdir/openwrt
+
 
 #argon
 git clone --depth 1 https://github.com/jerrykuku/luci-theme-argon.git package/luci-theme-argon
